@@ -1,15 +1,21 @@
 #!/usr/bin/env python3
-""" Complex types - string and int/float to tuple """
-from typing import List, Union, Tuple
+"""
+    python function
+"""
+from typing import Callable
 
 
-def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
-    """ a function to_kv that takes
-        strings, integers and floats arguments.
-        Args:
-            k: string type.
-            v: int or float type.
-        Return:
-            Tuple.
+def make_multiplier(multiplier: float) -> Callable[[float], float]:
     """
-    return (k, pow(v, 2))
+        Args:
+            multiplier: factor
+
+        Return:
+            multiplication in float
+    """
+
+    def x(f: float) -> float:
+        """ Get the second argument somthing like JS """
+        return float(f * multiplier)
+
+    return x

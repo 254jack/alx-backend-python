@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
-""" Complex types - string and int/float to tuple """
-from typing import List, Union, Tuple
+"""
+    type and iteration
+"""
+from typing import Iterable, Sequence, List, Union, Tuple
 
 
-def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
-    """ a function to_kv that takes
-        strings, integers and floats arguments.
-        Args:
-            k: string type.
-            v: int or float type.
-        Return:
-            Tuple.
+def element_length(lst: Iterable[Sequence])\
+        -> List[Tuple[Sequence, int]]:
     """
-    return (k, pow(v, 2))
+        Args:
+            lst: Sequence of list
+
+        Return:
+            List of tuple of sequence of integers
+    """
+
+    return [(i, len(i)) for i in lst]
