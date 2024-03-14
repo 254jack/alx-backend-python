@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
-""" Basic annotations - concat """
+""" Basic annotations - floor """
 
 
-def concat(str1: str, str2: str) -> str:
-    """ a function concat that takes a str arguments.
+def floor(n: float) -> int:
+    """ a function floor that takes a float argument.
         Args:
-            str1: str type.
-            str2: str type.
+            n: float type.
         Return:
-            Concatenated string.
+            The floor of the float.
     """
-    return str1 + str2
+    return int(n)
