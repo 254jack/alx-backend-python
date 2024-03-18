@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" async coroutine """
+""" Coroutine at the same time witha sync """
 import asyncio
 import random
 from typing import List
@@ -15,7 +15,7 @@ async def wait_n(n: int = 0, max_delay: int = 10) -> List[float]:
             n: spawn function
 
         Return:
-          random  float time 
+            float time random
     """
     delays: List[float] = []
     tasks: List = []
